@@ -2,7 +2,9 @@ html {
   -ms-touch-action: none;
 }
 
-body, canvas, div {
+body,
+canvas,
+div {
   display: block;
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -17,9 +19,10 @@ body, canvas, div {
 /* Remove spin of input type number */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 body {
@@ -47,7 +50,8 @@ body {
   position: absolute;
   margin: 0;
   overflow: hidden;
-  left: 0px;
+  left: -706px;
+  /*往右706可以贴在最左边*/
   top: 0px;
 
   display: -webkit-box;
@@ -60,11 +64,13 @@ canvas {
   background-color: rgba(0, 0, 0, 0);
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: #666;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   color: #666;
 }
 
@@ -87,36 +93,42 @@ p.footer {
 }
 
 .progress-bar {
-    background-color: #1a1a1a;
-    position: absolute;
-    left: 25%;
-    top: 80%;
-    height: 15px;
-    padding: 5px;
-    width: 50%;
-    /*margin: 0 -175px;         */
-    border-radius: 5px;
-    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;           
+  background-color: #1a1a1a;
+  position: absolute;
+  left: 25%;
+  top: 80%;
+  height: 15px;
+  padding: 5px;
+  width: 50%;
+  /*margin: 0 -175px;         */
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
 }
 
 .progress-bar span {
-    display: block;
-    height: 100%;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-    transition: width .4s ease-in-out; 
-    background-color: #34c2e3;    
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  transition: width .4s ease-in-out;
+  background-color: #34c2e3;
 }
 
 .stripes span {
-    background-size: 30px 30px;
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-                        transparent 75%, transparent);            
-    
-    animation: animate-stripes 1s linear infinite;             
+  background-size: 30px 30px;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+      transparent 75%, transparent);
+
+  animation: animate-stripes 1s linear infinite;
 }
 
 @keyframes animate-stripes {
-    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
 }
