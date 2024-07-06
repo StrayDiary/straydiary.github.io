@@ -58,14 +58,6 @@
         document.body.appendChild(domScript);
       }
 
-      // loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js', function () {
-      //   if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
-      //     loadScript(debug ? 'physics.js' : 'physics-min.js', window.boot);
-      //   }
-      //   else {
-      //     window.boot();
-      //   }
-      // });
     })();
   </script>
 
@@ -82,9 +74,11 @@
     -webkit-box-align: center;
     -webkit-box-pack: center;
     height: 100%;
-}
-#GameCanvas{
-  height: 100vh!important;
-}
+  }
+
+  #GameCanvas {
+    height: 100vh !important;
+  }
 </style>
+
 </html>
